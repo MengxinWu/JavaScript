@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+<script type="text/javascript" src="scripts/jquery-3.2.0.js"></script>
+</head>
+<body>
+	<p title="选择你最喜欢的水果">你最喜欢的水果是？</p>
+	<ul>
+		<li title="苹果">苹果</li>
+		<li title="橘子">橘子</li>
+		<li title="菠萝">菠萝</li>
+	</ul>
+
+<script type="text/javascript">
+	//查找节点
+	//1.查找元素节点
+/*	var $li = $("ul li:eq(1)");
+	var li_txt = $li.text();
+	console.log(li_txt);
+*/
+	//2.查找属性节点
+/*	var $para = $("p");
+	var p_txt = $para.attr("title");
+	console.log(p_txt);
+*/
+	//创建节点
+	//1.创建元素节点
+/*	var $li_1 = $("<li></li>");
+	var $li_2 = $("<li></li>");
+	$("ul").append($li_1);
+	$("ul").append($li_2);
+*/
+	//2.创建文本节点
+/*	var $li_1 = $("<li>香蕉</li>");
+	var $li_2 = $("<li>雪梨</li>");
+	$("ul").append($li_1);
+	$("ul").append($li_2);
+*/
+	//3.创建属性节点
+/*	var $li_1 = $("<li title='香蕉'>香蕉</li>");
+	var $li_2 = $("<li title='雪梨'>雪梨</li>");
+	$("ul").append($li_1);
+	$("ul").append($li_2);
+*/
+	//插入节点(append,prepend,after,before)
+/*	var $li_1 = $("<li title='香蕉'>香蕉</li>");
+	var $li_2 = $("<li title='雪梨'>雪梨</li>");
+	var $li_3 = $("<li title='其他'>其他</li>");
+
+	var $parent = $("ul");
+	var $two_li = $("ul li:eq(1)");
+
+	$parent.append($li_1);
+	$parent.prepend($li_2);
+	$li_3.insertAfter($two_li);
+*/
+	//利用插入节点实现DOM元素的移动
+/*	var $one_li = $("ul li:eq(1)");
+	var $two_li = $("ul li:eq(2)");
+	$two_li.insertBefore($one_li);
+*/
+	//删除节点
+	//1.remove()
+	var $li = $("ul li:eq(1)").remove();
+	alert("remove() return");
+	$li.appendTo($("ul"));
+</script>
+</body>
+</html>
